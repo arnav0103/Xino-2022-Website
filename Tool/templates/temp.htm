@@ -1,0 +1,33 @@
+<div class="mgb-small">
+  <div>
+    <div class="input-wrapper  mgb-e-small">
+        <div>
+          Particpant 1 Name
+          {{form.participant_gd_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,3).value or '')}}
+        <div class="form__line"></div>
+      </div>
+  </div>
+</div>
+</div>
+<div class="mgb-small">
+  <div>
+    <div class="input-wrapper  mgb-e-small">
+        <div>
+          Participant 1 Email
+          {{form.participant_gd_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,4).value or '')}}
+        <div class="form__line"></div>
+      </div>
+  </div>
+</div>
+</div>
+<div class="mgb-small">
+  <div>
+    <div class="input-wrapper  mgb-e-small">
+        <div>
+          Particpant 1 Phone
+          {{form.participant_gd_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,5).value or '')}}
+        <div class="form__line"></div>
+      </div>
+  </div>
+</div>
+</div>

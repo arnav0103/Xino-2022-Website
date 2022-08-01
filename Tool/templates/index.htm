@@ -1,0 +1,118 @@
+{%extends 'base.htm'%}
+
+{%block content%}
+    <main class="hero h-screen flex mb-48">
+        <div class="hero__img-container w-1/2 h-full overflow-hidden relative">
+            <img src="static/img/hero img.png" alt="hero image" class="hero__image w-full h-full absolute">
+        </div>
+
+        <div class="hero__text-container w-1/2 h-full relative">
+            <div class="hero__text w-full text-center absolute">
+                <h1 class="hero-heading font-bold tracking-wide">XINO 2021</h1>
+                <p class="hero__caption text-gray-400 text-4xl mb-12">Extreme Innovation</p>
+                <a href="events.htm" class="btn-black">Details</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- WHO ARE WE SECTION -->
+    <div class="about relative text-center mb-48">
+        <img src="static/img/triangular stuff.png" alt="filler" class="about-filler-1 w-48 absolute right-0">
+        <h2 class="heading-1 mb-12">Who are we?</h2>
+        <p class="about__text w-2/3 text-2xl mx-auto leading-loose mb-12">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsam dolore distinctio modi doloremque
+            inventore ratione ad, alias quos. Repellat, aperiam voluptas. Corrupti, ducimus incidunt esse atque sequi
+            dolor reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore autem sapiente placeat
+            praesentium quae corrupti nisi odit saepe ipsum quibusdam totam libero dolore, aperiam quisquam debitis
+            numquam perspiciatis eaque blanditiis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            suscipit ad repellat soluta assumenda ea, voluptatem veritatis numquam doloribus laboriosam natus tenetur
+            ipsa vero eligendi ullam non. Et, laborum accusantium.
+        </p>
+        <img src="static/img/triangular stuff.png" alt="filler" class="about-filler-2 w-48 absolute left-0">
+    </div>
+
+    <!-- MEMBERS SECTION -->
+    <div class="members relative mb-12 pt-32 pl-24 flex justify-between">
+        <div class="members__text-container">
+            <h2 class="heading-1">Meet our team<h2>
+                    <p class="members__caption text-3xl mb-16 text-gray-400">
+                        The people who make it happen.
+                    </p>
+                    <a href="#" class="btn-black">Learn more</a>
+        </div>
+        <div class="members__img-container w-7/12">
+            <img src="static/img/xino_pic.jpg" alt="xino members" class="w-full">
+        </div>
+    </div>
+
+    <!-- STATISTICS SECTION -->
+    <!-- <div class="stats relative text-center mb-48">
+            <h2 class="heading-1 mb-24">everyone is here.<h2>
+            <img src="static/img/triangular stuff.png" alt="filler" class="members-filler-1 w-48 absolute left-0 top-1/2">
+
+            <div class="stats__info flex justify-between w-3/5 mx-auto">
+                <div class="stat flex flex-col items-center justify-center">
+                    <div class="stat__number text-8xl font-bold mb-4">600+</div>
+                    <div class="stat__caption text-4xl text-gray-500">Participants</div>
+                </div>
+                <div class="stat flex flex-col items-center justify-center">
+                    <div class="stat__number text-8xl font-bold mb-4">35+</div>
+                    <div class="stat__caption text-4xl text-gray-500">Schools</div>
+                </div>
+                <div class="stat flex flex-col items-center justify-center">
+                    <div class="stat__number text-8xl font-bold mb-4">9</div>
+                    <div class="stat__caption text-4xl text-gray-500">Events</div>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- ALUMNI SECTION -->
+    <div class="alumni relative text-center mb-36">
+        <h2 class="heading-1 mb-16">Our alumni.<h2>
+                <img src="static/img/triangular stuff.png" alt="filler" class="alumni-filler-1 w-48 absolute right-0 top-1/2">
+                <div class="alumni__list flex justify-evenly items-center w-4/5 mx-auto mb-20">
+                    <div class="alumnus">
+                        <p class="alumnus__name text-3xl mb-2">Sayam Kanwar</p>
+                        <p class="alumnus__post text-2xl text-gray-500">President</p>
+                    </div>
+                    <div class="alumnus">
+                        <p class="alumnus__name text-3xl mb-2">Vanshaj Vohra</p>
+                        <p class="alumnus__post text-2xl text-gray-500">President</p>
+                    </div>
+                    <div class="alumnus">
+                        <p class="alumnus__name text-3xl mb-2">Parth Mahedru</p>
+                        <p class="alumnus__post text-2xl text-gray-500">Head GD</p>
+                    </div>
+                    <div class="alumnus">
+                        <p class="alumnus__name text-3xl mb-2">Radhika Marwaha</p>
+                        <p class="alumnus__post text-2xl text-gray-500">Head Photography</p>
+                    </div>
+                </div>
+                <a href="#" class="btn-black">View All</a>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer text-center py-8">
+        <p class="footer__caption text-2xl mb-8">Made with ❤️ by XINO</p>
+        <div class="contact flex justify-center items-center w-1/3 mx-auto">
+            <a href="">
+                <svg class="footer__icon w-8 h-8 mr-12">
+                    <use xlink:href="static/img/xino sprite.svg#icon-facebook"></use>
+                </svg>
+            </a>
+            <a href="">
+                <svg class="footer__icon w-8 h-8 mr-12">
+                    <use xlink:href="static/img/xino sprite.svg#icon-instagram"></use>
+                </svg>
+            </a>
+            <a href="">
+                <svg class="footer__icon w-8 h-8">
+                    <use xlink:href="static/img/xino sprite.svg#icon-discord"></use>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script src="static/js/app.js" defer></script>
+    <script src="static/js/home dark mode.js" defer></script>
+{%endblock%}
