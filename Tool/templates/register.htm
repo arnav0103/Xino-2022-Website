@@ -16,7 +16,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Particpant 1 Name
-                {{form.participant_gd1_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,3).value or '')}}
+                {{form.participant_gd1_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -27,7 +27,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Participant 1 Email
-                {{form.participant_gd1_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,4).value or '')}}
+                {{form.participant_gd1_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -38,7 +38,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Particpant 1 Phone
-                {{form.participant_gd1_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,5).value or '')}}
+                {{form.participant_gd1_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -51,7 +51,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Paritcipant 1 Name
-                {{form.participant_su1_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,6).value or '')}}
+                {{form.participant_su1_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -62,7 +62,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Participant 1 Email
-                {{form.participant_su1_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,7).value or '')}}
+                {{form.participant_su1_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -73,7 +73,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Particpant 1 Phone
-                {{form.participant_su1_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,8).value or '')}}
+                {{form.participant_su1_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -85,7 +85,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Participant 2 Name
-                {{form.participant_su2_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,9).value or '')}}
+                {{form.participant_su2_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -96,9 +96,14 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Particpant 2 Email
-                {{form.participant_su2_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,10).value or '')}}
+                {{form.participant_su2_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
+
+
+
+
+
         </div>
       </div>
       </div>
@@ -107,7 +112,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Participant 2 Phone
-                {{form.participant_su2_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,11).value or '')}}
+                {{form.participant_su2_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -121,7 +126,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Particpant 1 Name
-                {{form.participant_cr1_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,12).value or '')}}
+                {{form.participant_cr1_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -132,7 +137,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Participant 1 Email
-                {{form.participant_cr1_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,13).value or '')}}
+                {{form.participant_cr1_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -143,7 +148,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Particpant 1 Phone
-                {{form.participant_cr1_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,14).value or '')}}
+                {{form.participant_cr1_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -155,7 +160,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Particpant 2 Name
-                {{form.participant_cr2_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,15).value or '')}}
+                {{form.participant_cr2_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -166,7 +171,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Participant 2 Email
-                {{form.participant_cr2_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,16).value or '')}}
+                {{form.participant_cr2_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -177,7 +182,7 @@
           <div class="input-wrapper  mgb-e-small">
               <div>
                 Particpant 2 Phone
-                {{form.participant_cr2_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,17).value or '')}}
+                {{form.participant_cr2_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -189,8 +194,8 @@
 
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 1 Name
-                {{form.participant_cr3_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,18).value or '')}}
+                Particpant 3 Name
+                {{form.participant_cr3_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -200,8 +205,8 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 1 Email
-                {{form.participant_cr3_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,19).value or '')}}
+                Participant 3 Email
+                {{form.participant_cr3_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -211,8 +216,8 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 1 Phone
-                {{form.participant_cr3_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,20).value or '')}}
+                Particpant 3 Phone
+                {{form.participant_cr3_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -224,8 +229,8 @@
 
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 1 Name
-                {{form.participant_cr4_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,21).value or '')}}
+                Particpant 4 Name
+                {{form.participant_cr4_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -235,8 +240,8 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 1 Email
-                {{form.participant_cr4_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,22).value or '')}}
+                Participant 4 Email
+                {{form.participant_cr4_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -246,8 +251,8 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 1 Phone
-                {{form.participant_cr4_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,23).value or '')}}
+                Particpant 4 Phone
+                {{form.participant_cr4_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -258,8 +263,8 @@
 
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 1 Name
-                {{form.participant_cr5_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,24).value or '')}}
+                Particpant 5 Name
+                {{form.participant_cr5_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -269,8 +274,8 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 1 Email
-                {{form.participant_cr5_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,25).value or '')}}
+                Participant 5 Email
+                {{form.participant_cr5_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -280,8 +285,8 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 1 Phone
-                {{form.participant_cr5_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,26).value or '')}}
+                Particpant 5 Phone
+                {{form.participant_cr5_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
               <div class="form__line"></div>
             </div>
         </div>
@@ -296,7 +301,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Name
-          {{form.participant_cw1_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,27).value or '')}}
+          {{form.participant_cw1_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -307,7 +312,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Participant 1 Email
-          {{form.participant_cw1_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,28).value or '')}}
+          {{form.participant_cw1_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -318,7 +323,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Phone
-          {{form.participant_cw1_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,29).value or '')}}
+          {{form.participant_cw1_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -329,8 +334,8 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
-          {{form.participant_cw2_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,30).value or '')}}
+          Particpant 2 Name
+          {{form.participant_cw2_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -340,8 +345,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
-          {{form.participant_cw2_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,31).value or '')}}
+          Participant 2 Email
+          {{form.participant_cw2_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -351,8 +356,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
-          {{form.participant_cw2_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,32).value or '')}}
+          Particpant 2 Phone
+          {{form.participant_cw2_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -367,7 +372,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Name
-          {{form.participant_pg1_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,33).value or '')}}
+          {{form.participant_pg1_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -378,7 +383,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Participant 1 Email
-          {{form.participant_pg1_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,34).value or '')}}
+          {{form.participant_pg1_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -389,7 +394,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Phone
-          {{form.participant_pg1_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,35).value or '')}}
+          {{form.participant_pg1_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -400,8 +405,8 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
-          {{form.participant_pg2_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,36).value or '')}}
+          Particpant 2 Name
+          {{form.participant_pg2_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -411,8 +416,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
-          {{form.participant_pg2_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,37).value or '')}}
+          Participant 2 Email
+          {{form.participant_pg2_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -422,8 +427,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
-          {{form.participant_pg2_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,38).value or '')}}
+          Particpant 2 Phone
+          {{form.participant_pg2_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -438,7 +443,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Name
-          {{form.participant_hr1_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,39).value or '')}}
+          {{form.participant_hr1_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -449,7 +454,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Participant 1 Email
-          {{form.participant_hr1_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,40).value or '')}}
+          {{form.participant_hr1_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -460,7 +465,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Phone
-          {{form.participant_hr1_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,41).value or '')}}
+          {{form.participant_hr1_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -471,8 +476,8 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
-          {{form.participant_hr2_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,42).value or '')}}
+          Particpant 2 Name
+          {{form.participant_hr2_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -482,8 +487,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
-          {{form.participant_hr2_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,43).value or '')}}
+          Participant 2 Email
+          {{form.participant_hr2_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -493,8 +498,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
-          {{form.participant_hr2_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,44).value or '')}}
+          Particpant 2 Phone
+          {{form.participant_hr2_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -506,8 +511,8 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
-          {{form.participant_hr3_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,45).value or '')}}
+          Particpant 3 Name
+          {{form.participant_hr3_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -517,8 +522,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
-          {{form.participant_hr3_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,46).value or '')}}
+          Participant 3 Email
+          {{form.participant_hr3_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -528,8 +533,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
-          {{form.participant_hr3_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,47).value or '')}}
+          Particpant 3 Phone
+          {{form.participant_hr3_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -543,7 +548,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Name
-          {{form.participant_gm1_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,48).value or '')}}
+          {{form.participant_gm1_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -554,7 +559,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Participant 1 Email
-          {{form.participant_gm1_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,49).value or '')}}
+          {{form.participant_gm1_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -565,7 +570,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Phone
-          {{form.participant_gm1_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,50).value or '')}}
+          {{form.participant_gm1_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -576,8 +581,8 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
-          {{form.participant_gm2_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,51).value or '')}}
+          Particpant 2 Name
+          {{form.participant_gm2_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -587,8 +592,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
-          {{form.participant_gm2_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,52).value or '')}}
+          Participant 2 Email
+          {{form.participant_gm2_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -598,8 +603,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
-          {{form.participant_gm2_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,53).value or '')}}
+          Particpant 2 Phone
+          {{form.participant_gm2_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -611,8 +616,8 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
-          {{form.participant_gm3_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,54).value or '')}}
+          Particpant 3 Name
+          {{form.participant_gm3_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -622,8 +627,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
-          {{form.participant_gm3_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,55).value or '')}}
+          Participant 3 Email
+          {{form.participant_gm3_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -633,8 +638,8 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
-          {{form.participant_gm3_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,56).value or '')}}
+          Particpant 3 Phone
+          {{form.participant_gm3_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -648,7 +653,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Name
-          {{form.participant_ms1_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,57).value or '')}}
+          {{form.participant_ms1_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -659,7 +664,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Participant 1 Email
-          {{form.participant_ms1_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,58).value or '')}}
+          {{form.participant_ms1_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -670,22 +675,22 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Phone
-          {{form.participant_ms1_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,59).value or '')}}
+          {{form.participant_ms1_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
 </div>
 </div>
 <!-- ##########################camcord -->
-
+Camcord
 <div class="mgb-small">
-  Camcord
+
   <div>
 
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Name
-          {{form.participant_cc1_name(class="form__input", placeholder='Participant Name', value=sheet_events.cell(next_events_row,60).value or '')}}
+          {{form.participant_cc1_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -696,7 +701,7 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Participant 1 Email
-          {{form.participant_cc1_email(class="form__input", placeholder='Participant Email', value=sheet_events.cell(next_events_row,61).value or '')}}
+          {{form.participant_cc1_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>
@@ -707,7 +712,42 @@
     <div class="input-wrapper  mgb-e-small">
         <div>
           Particpant 1 Phone
-          {{form.participant_cc1_phone(class="form__input", placeholder='Participant Phone', value=sheet_events.cell(next_events_row,62).value or '')}}
+          {{form.participant_cc1_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
+        <div class="form__line"></div>
+      </div>
+  </div>
+</div>
+</div>
+<div class="mgb-small">
+
+  <div>
+
+    <div class="input-wrapper  mgb-e-small">
+        <div>
+          Particpant 2 Name
+          {{form.participant_cc2_name(class="form__input", placeholder='Participant Name', value=values.pop(0))}}
+        <div class="form__line"></div>
+      </div>
+  </div>
+</div>
+</div>
+<div class="mgb-small">
+  <div>
+    <div class="input-wrapper  mgb-e-small">
+        <div>
+          Participant 2 Email
+          {{form.participant_cc2_email(class="form__input", placeholder='Participant Email', value=values.pop(0))}}
+        <div class="form__line"></div>
+      </div>
+  </div>
+</div>
+</div>
+<div class="mgb-small">
+  <div>
+    <div class="input-wrapper  mgb-e-small">
+        <div>
+          Particpant 2 Phone
+          {{form.participant_cc2_phone(class="form__input", placeholder='Participant Phone', value=values.pop(0))}}
         <div class="form__line"></div>
       </div>
   </div>

@@ -92,4 +92,8 @@ class xino(FlaskForm):
     participant_cc1_email = StringField('Participant 1 Email')
     participant_cc1_phone = StringField('Participant 1 Phone')
 
+    participant_cc2_name = StringField('Participant 1 Name')
+    participant_cc2_email = StringField('Participant 1 Email')
+    participant_cc2_phone = StringField('Participant 1 Phone')
+
     submit = SubmitField('Submit')
