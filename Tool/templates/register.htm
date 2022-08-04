@@ -2,20 +2,20 @@
 
 {%block content%}
 <br><br><br><br>
-<div class="sign-in">
+<div class="sign-up">
   <br>
   <div class="row justify-content-center ">
     <form method="POST" class="form">
-      <h1 class="heading-2">Login</h1>
+      <h1 class="heading-2">Register</h1>
       <br>
       {{form.hidden_tag()}}
       <!-- #######################gd1 -->
-      Xclamation
+      <p class="e-des">Xclamation Point</p>
       <div class="mgb-small">
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 1 Name
+                <label for="" class="form__label">Participant 1 Name</label>
                 {{form.participant_gd1_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -26,7 +26,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 1 Email
+                <label for="" class="form__label">Participant 1 Email</label>
                 {{form.participant_gd1_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -37,7 +37,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 1 Phone
+                <label for="" class="form__label">Participant 1 Phone</label>
                 {{form.participant_gd1_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -45,12 +45,12 @@
       </div>
       </div>
       <!-- ######################################## surp -->
-      Xclusive
+      <p class="e-des">Xclusive</p>
       <div class="mgb-small">
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Paritcipant 1 Name
+                <label for="" class="form__label">Participant 1 Name</label>
                 {{form.participant_su1_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -61,7 +61,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 1 Email
+                <label for="" class="form__label">Participant 1 Email</label>
                 {{form.participant_su1_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -72,7 +72,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 1 Phone
+                <label for="" class="form__label">Participant 1 Phone</label>
                 {{form.participant_su1_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -84,7 +84,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 2 Name
+                <label for="" class="form__label">Participant 2 Name</label>
                 {{form.participant_su2_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -95,23 +95,19 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 2 Email
+                <label for="" class="form__label">Participant 2 Email</label>
                 {{form.participant_su2_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
-
-
-
-
-
         </div>
       </div>
       </div>
+
       <div class="mgb-small">
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 2 Phone
+                <label for="" class="form__label">Participant 2 Phone</label>
                 {{form.participant_su2_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -120,12 +116,12 @@
       </div>
       <!-- ####################creative -->
       <div class="mgb-small">
-        Creative
+        <p class="e-des">Xquisite</p>
         <div>
 
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 1 Name
+                <label for="" class="form__label">Participant 1 Name</label>
                 {{form.participant_cr1_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -136,7 +132,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 1 Email
+                <label for="" class="form__label">Participant 1 Email</label>
                 {{form.participant_cr1_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -147,7 +143,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 1 Phone
+                <label for="" class="form__label">Participant 1 Phone</label>
                 {{form.participant_cr1_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -159,7 +155,7 @@
 
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 2 Name
+                <label for="" class="form__label">Participant 2 Name</label>
                 {{form.participant_cr2_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -170,7 +166,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 2 Email
+                <label for="" class="form__label">Participant 2 Email</label>
                 {{form.participant_cr2_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -181,7 +177,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 2 Phone
+                <label for="" class="form__label">Participant 2 Phone</label>
                 {{form.participant_cr2_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -194,7 +190,7 @@
 
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 3 Name
+                <label for="" class="form__label">Participant 3 Name</label>
                 {{form.participant_cr3_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -205,7 +201,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 3 Email
+                <label for="" class="form__label">Participant 3 Email</label>
                 {{form.participant_cr3_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -216,7 +212,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 3 Phone
+                <label for="" class="form__label">Participant 3 Phone</label>
                 {{form.participant_cr3_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -229,7 +225,7 @@
 
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 4 Name
+                <label for="" class="form__label">Participant 1 Name</label>
                 {{form.participant_cr4_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -240,7 +236,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 4 Email
+                <label for="" class="form__label">Participant 4 Email</label>
                 {{form.participant_cr4_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -251,7 +247,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 4 Phone
+                <label for="" class="form__label">Participant 4 Phone</label>
                 {{form.participant_cr4_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -263,7 +259,7 @@
 
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 5 Name
+                <label for="" class="form__label">Participant 5 Name</label>
                 {{form.participant_cr5_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -274,7 +270,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Participant 5 Email
+                <label for="" class="form__label">Participant 5 Email</label>
                 {{form.participant_cr5_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -285,7 +281,7 @@
         <div>
           <div class="input-wrapper  mgb-e-small">
               <div>
-                Particpant 5 Phone
+                <label for="" class="form__label">Participant 5 Phone</label>
                 {{form.participant_cr5_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
               <div class="form__line"></div>
             </div>
@@ -295,12 +291,12 @@
 <!-- ####################### cross -->
 
 <div class="mgb-small">
-  Crossword
+  <p class="e-des">X-Word</p>
   <div>
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
+          <label for="" class="form__label">Participant 1 Name</label>
           {{form.participant_cw1_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -311,7 +307,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
+          <label for="" class="form__label">Participant 1 Email</label>
           {{form.participant_cw1_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -322,7 +318,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
+          <label for="" class="form__label">Participant 1 Phone</label>
           {{form.participant_cw1_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -334,7 +330,7 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 2 Name
+          <label for="" class="form__label">Participant 2 Name</label>
           {{form.participant_cw2_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -345,7 +341,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 2 Email
+          <label for="" class="form__label">Participant 2 Email</label>
           {{form.participant_cw2_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -356,7 +352,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 2 Phone
+          <label for="" class="form__label">Participant 2 Phone</label>
           {{form.participant_cw2_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -366,12 +362,12 @@
 
 <!-- ################################################ prog -->
 <div class="mgb-small">
-  Programming
+  <p class="e-des">Execute.eXe</p>
   <div>
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
+          <label for="" class="form__label">Participant 1 Name</label>
           {{form.participant_pg1_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -382,7 +378,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
+          <label for="" class="form__label">Participant 1 Email</label>
           {{form.participant_pg1_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -393,7 +389,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
+          <label for="" class="form__label">Participant 1 Phone</label>
           {{form.participant_pg1_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -405,7 +401,7 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 2 Name
+          <label for="" class="form__label">Participant 2 Name</label>
           {{form.participant_pg2_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -416,7 +412,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 2 Email
+          <label for="" class="form__label">Participant 2 Email</label>
           {{form.participant_pg2_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -427,7 +423,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 2 Phone
+          <label for="" class="form__label">Participant 2 Phone</label>
           {{form.participant_pg2_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -437,12 +433,12 @@
 
 <!-- #################################hrw -->
 <div class="mgb-small">
-  Hardware
+  <p class="e-des">X-86</p>
   <div>
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
+          <label for="" class="form__label">Participant 1 Name</label>
           {{form.participant_hr1_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -453,7 +449,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
+          <label for="" class="form__label">Participant 1 Email</label>
           {{form.participant_hr1_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -464,7 +460,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
+          <label for="" class="form__label">Participant 1 Phone</label>
           {{form.participant_hr1_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -476,7 +472,7 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 2 Name
+          <label for="" class="form__label">Participant 2 Name</label>
           {{form.participant_hr2_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -487,7 +483,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 2 Email
+          <label for="" class="form__label">Participant 2 Email</label>
           {{form.participant_hr2_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -498,7 +494,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 2 Phone
+          <label for="" class="form__label">Participant 2 Phone</label>
           {{form.participant_hr2_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -511,7 +507,7 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 3 Name
+          <label for="" class="form__label">Participant 3 Name</label>
           {{form.participant_hr3_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -522,7 +518,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 3 Email
+          <label for="" class="form__label">Participant 3 Email</label>
           {{form.participant_hr3_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -533,7 +529,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 3 Phone
+          <label for="" class="form__label">Participant 3 Phone</label>
           {{form.participant_hr3_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -542,12 +538,12 @@
 </div>
 <!-- ########################## game dev -->
 <div class="mgb-small">
-  Game Dev
+  <p class="e-des">Unity-eXe</p> 
   <div>
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
+          <label for="" class="form__label">Participant 1 Name</label>
           {{form.participant_gm1_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -558,7 +554,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
+          <label for="" class="form__label">Participant 1 Email</label>
           {{form.participant_gm1_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -569,7 +565,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
+          <label for="" class="form__label">Participant 1 Phone</label>
           {{form.participant_gm1_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -581,7 +577,7 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 2 Name
+          <label for="" class="form__label">Participant 2 Name</label>
           {{form.participant_gm2_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -592,7 +588,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 2 Email
+          <label for="" class="form__label">Participant 2 Email</label>
           {{form.participant_gm2_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -603,7 +599,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 2 Phone
+          <label for="" class="form__label">Participant 2 Phone</label>
           {{form.participant_gm2_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -616,7 +612,7 @@
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 3 Name
+          <label for="" class="form__label">Participant 3 Name</label>
           {{form.participant_gm3_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -627,7 +623,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 3 Email
+          <label for="" class="form__label">Participant 3 Email</label>
           {{form.participant_gm3_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -638,7 +634,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 3 Phone
+          <label for="" class="form__label">Participant 3 Phone</label>
           {{form.participant_gm3_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -647,12 +643,12 @@
 </div>
 <!-- ################### musical shutter -->
 <div class="mgb-small">
-  Musical Shutter
+  <p class="e-des">Musical Shutter</p>
   <div>
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
+          <label for="" class="form__label">Participant 1 Name</label>
           {{form.participant_ms1_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -663,7 +659,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
+          <label for="" class="form__label">Participant 1 Email</label>
           {{form.participant_ms1_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -674,7 +670,7 @@
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
+          <label for="" class="form__label">Participant 1 Phone</label>
           {{form.participant_ms1_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -682,14 +678,14 @@
 </div>
 </div>
 <!-- ##########################camcord -->
-Camcord
+<p class="e-des">Camcord</p>
 <div class="mgb-small">
 
   <div>
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Name
+          <label for="" class="form__label">Participant 1 Name</label>
           {{form.participant_cc1_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -700,7 +696,7 @@ Camcord
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 1 Email
+          <label for="" class="form__label">Participant 1 Email</label>
           {{form.participant_cc1_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -711,7 +707,7 @@ Camcord
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 1 Phone
+          <label for="" class="form__label">Participant 1 Phone</label>
           {{form.participant_cc1_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -724,7 +720,7 @@ Camcord
 
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 2 Name
+          <label for="" class="form__label">Participant 2 Name</label>
           {{form.participant_cc2_name(class="form__input", placeholder='Participant Name', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -735,7 +731,7 @@ Camcord
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Participant 2 Email
+          <label for="" class="form__label">Participant 2 Email</label>
           {{form.participant_cc2_email(class="form__input", placeholder='Participant Email', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
@@ -746,7 +742,7 @@ Camcord
   <div>
     <div class="input-wrapper  mgb-e-small">
         <div>
-          Particpant 2 Phone
+          <label for="" class="form__label">Participant 2 Phone</label>
           {{form.participant_cc2_phone(class="form__input", placeholder='Participant Phone', value=all.pop(0).value)}}
         <div class="form__line"></div>
       </div>
