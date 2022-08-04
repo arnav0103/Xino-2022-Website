@@ -10,7 +10,7 @@
             <div class="hero__text w-full text-center absolute">
                 <h1 class="hero-heading font-bold tracking-wide">XINO 2021</h1>
                 <p class="hero__caption text-gray-400 text-4xl mb-12">Extreme Innovation</p>
-                <a href="events.htm" class="btn-black">Details</a>
+                <a href="{{url_for('events')}}" class="btn-black">Details</a>
             </div>
         </div>
     </main>
@@ -41,7 +41,7 @@
                     <a href="#" class="btn-black">Learn more</a>
         </div>
         <div class="members__img-container w-7/12">
-            <img src="static/img/xino_pic.jpg" alt="xino members" class="w-full">
+            <img src="static/img/xino_members.png" alt="xino members" class="w-full">
         </div>
     </div>
 
@@ -72,23 +72,23 @@
                 <img src="static/img/triangular stuff.png" alt="filler" class="alumni-filler-1 w-48 absolute right-0 top-1/2">
                 <div class="alumni__list flex justify-evenly items-center w-4/5 mx-auto mb-20">
                     <div class="alumnus">
-                        <p class="alumnus__name text-3xl mb-2">Sayam Kanwar</p>
+                        <p class="alumnus__name text-3xl mb-2">Shaurya Bajaj</p>
                         <p class="alumnus__post text-2xl text-gray-500">President</p>
                     </div>
                     <div class="alumnus">
-                        <p class="alumnus__name text-3xl mb-2">Vanshaj Vohra</p>
+                        <p class="alumnus__name text-3xl mb-2">Manit Kaushik</p>
                         <p class="alumnus__post text-2xl text-gray-500">President</p>
                     </div>
                     <div class="alumnus">
-                        <p class="alumnus__name text-3xl mb-2">Parth Mahedru</p>
-                        <p class="alumnus__post text-2xl text-gray-500">Head GD</p>
+                        <p class="alumnus__name text-3xl mb-2">Moaksh Kakkar</p>
+                        <p class="alumnus__post text-2xl text-gray-500">Vice President</p>
                     </div>
                     <div class="alumnus">
-                        <p class="alumnus__name text-3xl mb-2">Radhika Marwaha</p>
-                        <p class="alumnus__post text-2xl text-gray-500">Head Photography</p>
+                        <p class="alumnus__name text-3xl mb-2">Shaunaak Sachdev</p>
+                        <p class="alumnus__post text-2xl text-gray-500">Vice President</p>
                     </div>
                 </div>
-                <a href="#" class="btn-black">View All</a>
+                <a href="{{url_for('members')}}" class="btn-black">View All</a>
     </div>
 
     <!--FOOTER-->
