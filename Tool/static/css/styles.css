@@ -488,6 +488,7 @@ body {
         flex-direction: column-reverse;  
         justify-content: center !important;
         align-items: center !important;
+        padding: 0  !important;
     }
 }
 
@@ -955,14 +956,16 @@ body {
           position: relative;
           font-family: inherit;
           color: inherit;
-          padding: .5rem 2rem;
+          padding: 1.5rem 3rem;
           font-size: 1.6rem;
           display: inline-block;
           border: none;
           width: 100%;
           outline: none;
           background-color: transparent;
-          border-bottom: 3px #FF757555 solid;
+          border-radius: 1000px;
+          border: 2px #FF757555 solid;
+          background-color: #FF757511;
           transition: all .2s ease-in-out;
         }
             
@@ -973,7 +976,9 @@ body {
           }
       
           .form__input:hover, .form__input:active, .form__input:focus , .form__input:valid{
-            border-bottom :3px #57c19788 solid; 
+            border :2px #57c19788 solid; 
+          background-color: #57c19711;
+
           }
 
           .sign-up, .sign-in, .account {
@@ -995,4 +1000,4 @@ body {
 
               .sign-up-page, .sign-in-page, .account-page {
                 position: relative;
-                padding-top: 15rem;}
+                padding-top: 10%;}
