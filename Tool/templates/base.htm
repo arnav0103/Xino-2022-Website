@@ -35,8 +35,10 @@
         <div class="navbar__links flex items-center justify-center">
             <a href="{{url_for('index')}}" class="navbar__link text-gray-500 text-3xl mr-16 hover:text-black">Home</a>
             <a href="{{url_for('events')}}" class="navbar__link text-gray-500 text-3xl mr-16 hover:text-black">Events</a>
-            <a href="{{url_for('school')}}" class="navbar__link text-gray-500 text-3xl mr-16 hover:text-black">Register</a>
+            <a href="{{url_for('school')}}" class="navbar__link text-gray-500 text-3xl mr-16 hover:text-black">Team</a>
             <a href="{{url_for('members')}}" class="navbar__link text-gray-500 text-3xl mr-16 hover:text-black">Members</a>
+            <a href="{{url_for('alumini')}}" class="navbar__link text-gray-500 text-3xl mr-16 hover:text-black">Alumini</a>
+
         </div>
         <div class="toggleNav lg:hidden"></div>
     </nav>
@@ -45,8 +47,10 @@
         class="navbar-responsive flex flex-col h-screen w-1/2 justify-center items-center fixed bg-white top-0 right-0 py-8 px-12 z-10 lg:hidden">
         <a href="index.htm" class="text-6xl text-gray-700 mb-28">Home</a>
         <a href="events.htm" class="text-6xl text-gray-700 mb-28">Events</a>
-        <a href="register.htm" class="text-6xl text-gray-700 mb-28">Register</a>
+        <a href="register.htm" class="text-6xl text-gray-700 mb-28">Team</a>
         <a href="members.htm" class="text-6xl text-gray-700 mb-28">Members</a>
+        <a href="{{url_for('alumini')}}" class="navbar__link text-gray-500 text-3xl mr-16 hover:text-black">Alumini</a>
+
     </div>
 
     {%block content%}

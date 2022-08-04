@@ -22,6 +22,10 @@ def events():
 def members():
     return(render_template('members.htm'))
 
+@app.route('/alumini', methods=['GET', 'POST'])
+def alumini():
+    return(render_template('alumni.htm'))
+
 
 @app.route('/school', methods=['GET', 'POST'])
 def school():
