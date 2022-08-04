@@ -66,7 +66,7 @@ def register(school, hash):
     sheet_events = client.open("Xino Registrations").worksheet('events')
     next_events_row = 1
     try:
-        x = sheet_events.find(school, in_column=2)
+        x = sheet_events.find(school, in_column=3)
         next_events_row = x.row
     except gspread.exceptions.CellNotFound:
         next_events_row = next_available_row(sheet_events)

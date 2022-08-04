@@ -30,7 +30,6 @@
     <!-- NAVBAR -->
     <nav class="navbar w-screen absolute flex py-4 px-16 justify-between items-center z-50">
         <div class="navbar__logo-container h-24 w-24">
-            <img src="/static/img/logo dark.png" alt="xino logo" class="navbar__logo w-full h-full">
         </div>
 
         <div class="navbar__links flex items-center justify-center">
@@ -38,17 +37,6 @@
             <a href="{{url_for('events')}}" class="navbar__link text-gray-500 text-3xl mr-16 hover:text-black">Events</a>
             <a href="{{url_for('school')}}" class="navbar__link text-gray-500 text-3xl mr-16 hover:text-black">Register</a>
             <a href="{{url_for('members')}}" class="navbar__link text-gray-500 text-3xl mr-16 hover:text-black">Members</a>
-            <div class="dark-toggle">
-                <input type="checkbox" class="dark-toggle__input" id="dark-toggle__input">
-                <label for="dark-toggle__input" class="dark-toggle__btn">
-                    <div class="switch-container">
-                        <div class="switch">
-                            <div class="circle"></div>
-                        </div>
-                        <span>Dark Mode</span>
-                    </div>
-                </label>
-            </div>
         </div>
         <div class="toggleNav lg:hidden"></div>
     </nav>
@@ -59,12 +47,6 @@
         <a href="events.htm" class="text-6xl text-gray-700 mb-28">Events</a>
         <a href="register.htm" class="text-6xl text-gray-700 mb-28">Register</a>
         <a href="members.htm" class="text-6xl text-gray-700 mb-28">Members</a>
-        <div class="dark-toggle">
-            <input type="checkbox" class="dark-toggle__input" id="dark-toggle__input">
-            <label for="dark-toggle__input" class="dark-toggle__btn">
-                <span class="text-6xl">Dark Mode</span>
-            </label>
-        </div>
     </div>
 
     {%block content%}

@@ -412,7 +412,7 @@ body {
     font-size: 1.8rem;
     padding: 1rem 4rem;
     border-radius: 500px;
-    box-shadow: #ACACAC 5px 5px 4rem;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.18);
     transition: all .3s ease-in-out;
 }
 
@@ -552,11 +552,31 @@ body {
 }
 
 .event {
-    box-shadow:  #EAEAEA 10px 10px 4rem;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.13) 0px 6px 15px -2px, rgba(0, 0, 0, 0.1) 0px 3px 15px -3px;
+}
+
+.event .btn-black {
+    font-size: 1.3rem;
+    padding: 1rem 2.5rem;
 }
 
 .event-dark-mode {
     box-shadow: #212121 10px 10px 4rem;
+}
+
+.event__details {
+    font-size: 1.5rem;
+    line-height: 1.75;
+}
+
+.heading-3 {
+    display: inline-block;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 10px;
+    opacity: 70%;
 }
 
 .event-filler-1 {
@@ -571,6 +591,7 @@ body {
 
 .event-heading__icon {
     fill: #33D0B3;
+    transform: scale(0.8);
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -580,24 +601,8 @@ body {
 }
 
 .heading-2 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
-}
-
-.green-overlay {
-    clip-path: polygon(0 60%, 100% 21%, 100% 100%, 0% 100%);
-    height: 80%;
-    background-color: rgba(51, 208, 179, .2);
-}
-
-.event-filler-3 {
-    bottom: 0;
-    right: 0;
-}
-
-.event-filler-4 {
-    bottom: 3.2rem;
-    right: 0;
 }
 
 .register-hero {
@@ -738,11 +743,12 @@ body {
     height: 25rem;
     background-image: url('../img/sample\ team\ image.jpg');
     background-size: 100% 100%;
-    box-shadow: 5px 5px 4rem rgba(33, 33, 33, .2);
+    box-shadow: rgba(50, 50, 93, 0.13) 0px 6px 15px -2px, rgba(0, 0, 0, 0.1) 0px 3px 15px -3px;
     position: relative;
     transform: scale(1);
     transition: all .3s ease-in-out;
     overflow: hidden;
+    border-radius: 20px;
 }   
 
 @media only screen and (max-width: 28.5em) {
@@ -752,7 +758,7 @@ body {
 }
 
 .member__overlay {
-    background-image: linear-gradient(to left bottom, rgba(250, 250, 250, .55), rgba(33, 33, 33, .55));
+    background-image: linear-gradient(to left bottom, rgba(37, 253, 202, 0.55), rgba(33, 33, 33, .55));
     height: 25rem;
     width: 100%;
     position: absolute;
@@ -820,3 +826,173 @@ body {
         transform: translateY(-50%);
     }
 }
+
+.popup {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.98);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease; }
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      .popup {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        background-color: rgba(51, 51, 51, 0.3); } }
+
+    .popup .heading-2 {
+        color: #33D0B3;
+    }
+    .popup__content {
+      position: absolute;
+      padding: 5rem 0rem;
+      width: 45%;
+      background-color: #fff;
+      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.3);
+      border-radius: 20px;  
+      display: table;
+      overflow: hidden;
+      transition: all .2s .2s ease; }
+      @media (max-width: 75em) {
+        .popup__content {
+          display: block;
+          width: 75%; 
+        padding: 5rem;} }
+    .popup__right {
+      width: 80%;
+      margin: auto;
+      vertical-align: middle; }
+      @media (max-width: 75em) {
+        .popup__right {
+          width: 100%;
+          display: block; } }
+      @media (max-width: 37.5em) {
+        .popup__right {
+          padding: 0 2rem; } }
+    .popup__text {
+      font-size: 1.4rem;
+    line-height: 1.8;}
+      @media (max-width: 37.5em) {
+        .popup__text {
+          font-size: 1.6rem;
+          margin-bottom: 1rem; } }
+    .popup:target {
+      opacity: 1;
+      visibility: visible; }
+    .popup:target .popup__content {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1); }
+    .popup__close:link, .popup__close:visited {
+      color: #777;
+      position: absolute;
+      top: 2.5rem;
+      right: 2.5rem;
+      font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: color .2s ease;
+      line-height: 1; }
+    .popup__close:hover {
+      color: #55c57a; }
+
+    .eligibility, .participants, .teams {
+        font-weight: 600;
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .des {
+        font-size: 1.5rem;
+        line-height: 1.7;
+    }
+
+    .form {
+        padding: 1rem 2rem; }
+        .form .btn-primary {
+          margin-top: 4rem; }
+        .form .input-wrapper {
+          position: relative; 
+          margin-bottom: 2rem;}
+            
+        .form__search-input::placeholder {
+          font-size: 1.2rem;
+          font-family: 'Montserrat', sans-serif;
+        }
+      
+        .form__btn {
+          cursor: pointer;
+          display: inline-block;
+          outline: none;
+          border: none;
+          text-decoration: none;
+          font-size: 1.4rem;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          border-radius: 1000px;
+          padding: 1rem 3rem;
+          transition: all .3s ease-in-out;
+          color: #fff;
+          display: inline-block;
+          position: relative;
+          background-image: linear-gradient(to right, #28c19d, #1acea4);
+          background-size: 200% 200%;
+          background-position: -200 -200%;
+        }
+
+        .form__btn:hover {
+          background-position: 200% 200%;
+        }
+
+        .form__input {
+          position: relative;
+          font-family: inherit;
+          color: inherit;
+          padding: .5rem 2rem;
+          font-size: 1.6rem;
+          display: inline-block;
+          border: none;
+          width: 100%;
+          outline: none;
+          background-color: transparent;
+          border-bottom: 3px #FF757555 solid;
+          transition: all .2s ease-in-out;
+        }
+            
+          .error {
+            color: #FF7575;
+            font-size: 1.1rem;
+            font-weight: 600;
+          }
+      
+          .form__input:hover, .form__input:active, .form__input:focus , .form__input:valid{
+            border-bottom :3px #57c19788 solid; 
+          }
+
+          .sign-up, .sign-in, .account {
+            width: 35%;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            margin: 0rem auto 2rem auto;
+            box-shadow: 0 5px 6rem rgba(0, 0, 0, 0.16); }
+            @media only screen and (max-width: 56.25em) {
+              .sign-up, .sign-in, .account {
+                width: 50%; } }
+            @media only screen and (max-width: 37.5em) {
+              .sign-up, .sign-in, .account {
+                width: 70%; } }
+            .sign-up .heading-2, .sign-in .heading-2, .account .heading-2 {
+              text-align: center; }
+
+              .sign-up-page, .sign-in-page, .account-page {
+                position: relative;
+                padding-top: 15rem;}
