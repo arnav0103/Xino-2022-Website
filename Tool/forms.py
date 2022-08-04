@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, StringField, DateField, PasswordField
+from wtforms import StringField, SubmitField, StringField, DateField, PasswordField, IntegerField
 from wtforms.validators import DataRequired, Email
 
 
@@ -95,5 +95,13 @@ class xino(FlaskForm):
     participant_cc2_name = StringField('Participant 1 Name')
     participant_cc2_email = StringField('Participant 1 Email')
     participant_cc2_phone = StringField('Participant 1 Phone')
+
+    submit = SubmitField('Submit')
+
+class request_invite(FlaskForm):
+    school_name = StringField('School Name' , validators=[DataRequired()])
+    contact = IntegerField('Contact of Teacher Incharge', validators=[DataRequired()])
+    email = StringField('Email', validators=[DataRequired(),Email()])
+    website = StringField('School Website', validators=[DataRequired()])
 
     submit = SubmitField('Submit')

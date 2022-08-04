@@ -1,7 +1,7 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-from Tool import app, client, csrf
-from Tool.forms import xino, schools
+from Tool import app, client, csrf , client1
+from Tool.forms import xino, schools , request_invite
 from flask import render_template, request, url_for, redirect, abort
 from datetime import datetime
 from gspread_formatting import *
@@ -82,5 +82,23 @@ def register(school, hash):
         sheet_events.update_cells(update)
     return render_template('register.htm', form=form, sheet_events=sheet_events, next_events_row=next_events_row,values=values)
 
+@app.route('/req_invite', methods=['GET', 'POST'])
+def req_invite():
+    form = request_invite()
+    sheet_requests = client1.open("Xino Registrations").worksheet('requests')
+    text = ''
+    if form.validate_on_submit():
+        scul_email = form.email.data
+        try:
+            x = sheet_requests.find(scul_email, in_column=4)
+            text = 'Already registered on this email'
+        except gspread.exceptions.CellNotFound:
+            next_events_row = next_available_row(sheet_requests)
+            sheet_requests.update_cell(next_events_row,2,form.school_name.data)
+            sheet_requests.update_cell(next_events_row,3, form.contact.data)
+            sheet_requests.update_cell(next_events_row,4, scul_email)
+            sheet_requests.update_cell(next_events_row,5, form.website.data)
+            text = 'Invite Requested you will recieve the invite on the mail registered'
+    return render_template('request.htm', form=form , text=text)
 if __name__ == '__main__':
     app.run(debug=True)
