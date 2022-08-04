@@ -19,7 +19,7 @@
           </div>
         </div>
         </div>
-  
+
         <div class="mgb-small">
           <div>
             <div class="input-wrapper  mgb-e-small">
@@ -28,7 +28,7 @@
                 <div class="form__line"></div>
               </div>
           </div>
-  
+
           {%if form.password.errors%}
           {%for error in form.password.errors%}
           <small class="error">{{error}}</small>
@@ -36,10 +36,10 @@
           <small class='text-danger'>{{error}}</small>
         </div>
         </div>
-  
+
         <div>
           {{form.submit(class ="form__btn mb-6 mt-6")}}<br>
-  
+
         </div>
       </form>
     </div>
