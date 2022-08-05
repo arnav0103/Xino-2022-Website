@@ -1,11 +1,12 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-from Tool import app, client, csrf , client1
-from Tool.forms import xino, schools , request_invite
+from Tool import app, client, csrf, client1
+from Tool.forms import xino, schools, request_invite
 from flask import render_template, request, url_for, redirect, abort
 from datetime import datetime
 from gspread_formatting import *
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_ngrok import run_with_ngrok
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -21,6 +22,7 @@ def events():
 @app.route('/members', methods=['GET', 'POST'])
 def members():
     return(render_template('members.htm'))
+
 
 @app.route('/alumini', methods=['GET', 'POST'])
 def alumini():
@@ -79,7 +81,8 @@ def register(school, hash):
     all = row_cells(sheet_events, next_events_row)
     if form.validate_on_submit():
         # GD
-        all_response = [form.participant_gd1_name.data, form.participant_gd1_email.data, form.participant_gd1_phone.data, form.participant_su1_name.data, form.participant_su1_email.data, form.participant_su1_phone.data, form.participant_su2_name.data, form.participant_su2_email.data, form.participant_su2_phone.data, form.participant_cr1_name.data, form.participant_cr1_email.data, form.participant_cr1_phone.data, form.participant_cr2_name.data, form.participant_cr2_email.data, form.participant_cr2_phone.data, form.participant_cr3_name.data, form.participant_cr3_email.data, form.participant_cr3_phone.data, form.participant_cr4_name.data, form.participant_cr4_email.data, form.participant_cr4_phone.data, form.participant_cr5_name.data, form.participant_cr5_email.data, form.participant_cr5_phone.data, form.participant_cw1_name.data, form.participant_cw1_email.data, form.participant_cw1_phone.data, form.participant_cw2_name.data, form.participant_cw2_email.data, form.participant_cw2_phone.data, form.participant_pg1_name.data,form.participant_pg1_email.data, form.participant_pg1_phone.data, form.participant_pg2_name.data, form.participant_pg2_email.data, form.participant_pg2_phone.data, form.participant_hr1_name.data, form.participant_hr1_email.data, form.participant_hr1_phone.data, form.participant_hr2_name.data, form.participant_hr2_email.data, form.participant_hr2_phone.data, form.participant_hr3_name.data, form.participant_hr3_email.data, form.participant_hr3_phone.data, form.participant_gm1_name.data, form.participant_gm1_email.data, form.participant_gm1_phone.data, form.participant_gm2_name.data, form.participant_gm2_email.data, form.participant_gm2_phone.data, form.participant_gm3_name.data, form.participant_gm3_email.data, form.participant_gm3_phone.data, form.participant_ms1_name.data, form.participant_ms1_email.data, form.participant_ms1_phone.data, form.participant_cc1_name.data, form.participant_cc1_email.data, form.participant_cc1_phone.data, form.participant_cc2_name.data, form.participant_cc2_email.data, form.participant_cc2_phone.data]
+        all_response = [form.participant_gd1_name.data, form.participant_gd1_email.data, form.participant_gd1_phone.data, form.participant_su1_name.data, form.participant_su1_email.data, form.participant_su1_phone.data, form.participant_su2_name.data, form.participant_su2_email.data, form.participant_su2_phone.data, form.participant_cr1_name.data, form.participant_cr1_email.data, form.participant_cr1_phone.data, form.participant_cr2_name.data, form.participant_cr2_email.data, form.participant_cr2_phone.data, form.participant_cr3_name.data, form.participant_cr3_email.data, form.participant_cr3_phone.data, form.participant_cr4_name.data, form.participant_cr4_email.data, form.participant_cr4_phone.data, form.participant_cr5_name.data, form.participant_cr5_email.data, form.participant_cr5_phone.data, form.participant_cw1_name.data, form.participant_cw1_email.data, form.participant_cw1_phone.data, form.participant_cw2_name.data, form.participant_cw2_email.data, form.participant_cw2_phone.data, form.participant_pg1_name.data,
+                        form.participant_pg1_email.data, form.participant_pg1_phone.data, form.participant_pg2_name.data, form.participant_pg2_email.data, form.participant_pg2_phone.data, form.participant_hr1_name.data, form.participant_hr1_email.data, form.participant_hr1_phone.data, form.participant_hr2_name.data, form.participant_hr2_email.data, form.participant_hr2_phone.data, form.participant_hr3_name.data, form.participant_hr3_email.data, form.participant_hr3_phone.data, form.participant_gm1_name.data, form.participant_gm1_email.data, form.participant_gm1_phone.data, form.participant_gm2_name.data, form.participant_gm2_email.data, form.participant_gm2_phone.data, form.participant_gm3_name.data, form.participant_gm3_email.data, form.participant_gm3_phone.data, form.participant_ms1_name.data, form.participant_ms1_email.data, form.participant_ms1_phone.data, form.participant_cc1_name.data, form.participant_cc1_email.data, form.participant_cc1_phone.data, form.participant_cc2_name.data, form.participant_cc2_email.data, form.participant_cc2_phone.data]
         update = [all[0]]
         print(len(all))
         print(len(all_response))
@@ -103,11 +106,14 @@ def req_invite():
             text = 'Already registered on this email'
         except gspread.exceptions.CellNotFound:
             next_events_row = next_available_row(sheet_requests)
-            sheet_requests.update_cell(next_events_row,2,form.school_name.data)
-            sheet_requests.update_cell(next_events_row,3, form.contact.data)
-            sheet_requests.update_cell(next_events_row,4, scul_email)
-            sheet_requests.update_cell(next_events_row,5, form.website.data)
+            sheet_requests.update_cell(
+                next_events_row, 2, form.school_name.data)
+            sheet_requests.update_cell(next_events_row, 3, form.contact.data)
+            sheet_requests.update_cell(next_events_row, 4, scul_email)
+            sheet_requests.update_cell(next_events_row, 5, form.website.data)
             text = 'Invite Requested you will recieve the invite on the mail registered'
-    return render_template('request.htm', form=form , text=text)
+    return render_template('request.htm', form=form, text=text)
+
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
