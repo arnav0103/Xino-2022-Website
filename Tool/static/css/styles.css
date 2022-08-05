@@ -921,7 +921,6 @@ body {
           background-color: transparent;
           border-radius: 1000px;
           border: 2px #FF757555 solid;
-          background-color: #FF757511;
           transition: all .2s ease-in-out;
         }
             
@@ -933,7 +932,6 @@ body {
       
           .form__input:hover, .form__input:active, .form__input:focus , .form__input:valid{
             border :2px #57c19788 solid; 
-          background-color: #57c19711;
 
           }
 
@@ -1015,13 +1013,13 @@ body {
 .members-grid {
     margin-top: 5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-gap: 5rem;
     margin-bottom: 10rem;
 }
 
 .members {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
 }
 

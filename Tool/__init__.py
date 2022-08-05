@@ -6,7 +6,7 @@ from flask_wtf.csrf import CSRFProtect
 from flask_ngrok import run_with_ngrok
 ################
 app = Flask(__name__)
-run_with_ngrok(app)
+# run_with_ngrok(app)
 
 scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/spreadsheets',
          "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
