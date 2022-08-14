@@ -1,4 +1,4 @@
-import gspread
+import gspread , app
 from oauth2client.service_account import ServiceAccountCredentials
 from Tool import app, client, csrf, client1
 from Tool.forms import xino, schools, request_invite
