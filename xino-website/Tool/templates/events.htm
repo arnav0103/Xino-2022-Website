@@ -1,0 +1,307 @@
+{%extends 'base.htm'%}
+
+{%block content%}
+        <!-- HERO SECTION  -->
+        <main class="events-hero relative pt-40 mb-32">
+            <div class="heading flex justify-start items-center">
+                <img src="../static/img/triangular_stuff.png" alt="side decor" class="events-hero-filler-1 w-48 mr-28">
+                <h2 class="heading-1">Events</h2>
+            </div>
+            <!-- EVENTS -->
+            <div class="event-grid grid w-7/12 mx-auto gap-x-48 gap-y-36" id="events">
+                <div class="event relative px-20 pt-16 pb-24 mb-2">
+                    <div class="event-heading flex items-center">
+                        <svg class="event-heading__icon w-24 h-24 mr-8">
+                            <use xlink:href="static/img/xino_sprite_2.svg#icon-cogs"></use>
+                        </svg>
+                        <h3 class="heading-2">Xquisite</h3>
+                    </div>
+                    <h3 class="heading-3 mb-10">creative</h3>
+                    <p class="event__details mb-16">
+                        The classic event that converges entrepreneurship, development, and design into a striking event. This event was conceptualized for those who wish to be forerunners in this generation of technology. To address the problems of tomorrow, we need to ideate solutions for today.
+                    </p>
+                    <a href="#popup-xquisite" class="btn-black">Details</a>
+                </div>
+
+                <div class="event relative px-20 pt-16 pb-24">
+                    <div class="event-heading flex items-center mb-2">
+                        <svg class="event-heading__icon w-24 h-24 mr-8">
+                            <use xlink:href="static/img/xino_sprite_2.svg#icon-edit-pencil"></use>
+                        </svg>
+                        <h3 class="heading-2">X-Word</h3>
+                    </div>
+                    <h3 class="heading-3 mb-10">crossword</h3>
+                    <p class="event__details mb-16">
+                        Cryptic crossword based on wit, wordplay and an exceptional sense of humor. All answers will be related to the fields of computers, IT, and everything happening in the world of Technology. "Think out of the box but inside the grid." 
+                    </p>
+                    <a href="#popup-xword" class="btn-black">Details</a>
+                </div>
+
+                <div class="event relative px-20 pt-16 pb-24 mb-2">
+                    <div class="event-heading flex items-center">
+                        <svg class="event-heading__icon w-24 h-24 mr-8">
+                            <use xlink:href="static/img/xino_sprite_2.svg#icon-binoculars"></use>
+                        </svg>
+                        <h3 class="heading-2">X-Quest</h3>
+                    </div>
+                    <h3 class="heading-3 mb-10">cryptic hunt</h3>
+                    <p class="event__details mb-16">
+                        Solving Cryptic clues and racing with everyone to complete the most number of challenges. We present to you our annual cryptic hunt - X-Quest.
+                    </p>
+                    <a href="#popup-xquest" class="btn-black">Details</a>
+                </div>
+
+                <div class="event relative px-20 pt-16 pb-24">
+                    <div class="event-heading flex items-center mb-2">
+                        <svg class="event-heading__icon w-24 h-24 mr-8">
+                            <use xlink:href="static/img/xino_sprite_2.svg#icon-gift"></use>
+                        </svg>
+                        <h3 class="heading-2">Xclusive</h3>
+                    </div>
+                    <h3 class="heading-3 mb-10">surprise</h3>
+                    <p class="event__details mb-16">
+                        We would tell you to expect the unexpected, but that would be too mainstream. The battle is on, soldier. 
+                    </p>
+                    <a href="#popup-xclusive" class="btn-black">Details</a>
+                </div>
+
+                <div class="event relative px-20 pt-16 pb-24">
+                    <div class="event-heading flex items-center mb-2">
+                        <svg class="event-heading__icon w-24 h-24 mr-8">
+                            <use xlink:href="static/img/xino_sprite_2.svg#icon-bubbles2"></use>
+                        </svg>
+                        <h3 class="heading-2">Xclamation Point</h3>
+                    </div>
+                    <h3 class="heading-3 mb-10">gd</h3>
+                    <p class="event__details mb-16">
+                        For good ideas and true innovation, you need human interaction, argument, and discussion. To give your views a voice, your logic a reason and your conviction a direction, we invite you to the colossal clash of ideas and opinions.
+                    </p>
+                    <a href="#popup-xclam" class="btn-black">Details</a>
+                </div>
+
+                <div class="event relative px-20 pt-16 pb-24">
+                    <div class="event-heading flex items-center mb-2">
+                        <svg class="event-heading__icon w-24 h-24 mr-8">
+                            <use xlink:href="static/img/xino_sprite.svg#icon-code"></use>
+                        </svg>
+                        <h3 class="heading-2">Execute.eXe</h3>
+                    </div>
+                    <h3 class="heading-3 mb-10">programming</h3>
+                    <p class="event__details mb-16">
+                        The event that tests your programming skills and endurance at the highest level. It is for those who wish to program competitively and compete with similar minded people. 
+                    </p>
+                    <a href="#popup-execute" class="btn-black">Details</a>
+                </div>
+
+                <div class="event relative px-20 pt-16 pb-24">
+                    <div class="event-heading flex items-center mb-2">
+                        <svg class="event-heading__icon w-24 h-24 mr-8">
+                            <use xlink:href="static/img/xino_sprite_2.svg#icon-pacman"></use>
+                        </svg>
+                        <h3 class="heading-2">Unity.eXe</h3>
+                    </div>
+                    <h3 class="heading-3 mb-10">game development</h3>
+                    <p class="event__details mb-16">
+                        Put your programming and game design skills to use. Combine teamwork with your technical skills to create the best game possible in a short time.
+                    </p>
+                    <a href="#popup-unity" class="btn-black">Details</a>
+                </div>
+
+                <div class="event relative px-20 pt-16 pb-24">
+                    <div class="event-heading flex items-center mb-2">
+                        <svg class="event-heading__icon w-24 h-24 mr-8">
+                            <use xlink:href="static/img/xino_sprite_2.svg#icon-calculator"></use>
+                        </svg>
+                        <h3 class="heading-2">X-86</h3>
+                    </div>
+                    <h3 class="heading-3 mb-10">hardware</h3>
+                    <p class="event__details mb-16">
+                        You will need to formulate a team with students well versed in software development, electronics, and operating systems.
+                    </p>
+                    <a href="#popup-x86" class="btn-black">Details</a>
+                </div>
+
+                <div class="event relative px-20 pt-16 pb-24">
+                    <div class="event-heading flex items-center mb-2">
+                        <svg class="event-heading__icon w-24 h-24 mr-8">
+                            <use xlink:href="static/img/xino_sprite_2.svg#icon-camera"></use>
+                        </svg>
+                        <h3 class="heading-2">Xposure</h3>
+                    </div>
+                    <h3 class="heading-3 mb-10">photography</h3>
+                    <p class="event__details mb-16">
+                       The photography event consists of two sub events - Musical Shutter and Camcord, to pack not one, but loads of punches. So get your lenses and cameras and ready, set, click!
+                    </p>
+                    <a href="#popup-xposure" class="btn-black">Details</a>
+                </div>  
+            </div>
+        </main>
+
+        <!-- POPUPS -->
+
+        <div class="popup" id="popup-xquisite">
+            <div class="popup__content">
+                <div class="popup__right">
+                    <a href="#events" class="popup__close">&times;</a>
+                    <h2 class="heading-2 mb-4">Xquisite</h2>
+                    <h3 class="heading-3 mb-16">creative</h3>
+                    <div class="popup__text mb-4">
+                        <p class="eligibility">Eligibilty: IX-XII</p>
+                        <p class="participants">No. of Participants: up to 5</p>
+                        <p class="teams mb-16">No. of teams per school: 1</p>
+                        <p class="des">
+                            The participants would be required to conceptualize and pitch a product based on the problem statement. The prelims would involve the submission of the deliverables. In the finals, a few teams would be asked to pitch their product to the judges. The prompt for the same will be given on 21 August 2022, 00:00 hours.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-xword">
+            <div class="popup__content">
+                <div class="popup__right">
+                    <a href="#events" class="popup__close">&times;</a>
+                    <h2 class="heading-2 mb-4">X-Word</h2>
+                    <h3 class="heading-3 mb-16">crossword</h3>
+                    <div class="popup__text mb-4">
+                        <p class="eligibility">Eligibilty: open</p>
+                        <p class="participants">No. of Participants: 2</p>
+                        <p class="teams mb-16">No. of teams per school: 1</p>
+                        <p class="des">
+                            The event will consist of a preliminary round that then would be followed by the finals where the participants would be expected to answer as many questions as possible. All answers would be related to the fields of computers, IT, and everything happening in the world of technology. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-xquest">
+            <div class="popup__content">
+                <div class="popup__right">
+                    <a href="#events" class="popup__close">&times;</a>
+                    <h2 class="heading-2 mb-4">X-Quest</h2>
+                    <h3 class="heading-3 mb-16">cryptic hunt</h3>
+                    <div class="popup__text mb-4">
+                        <p class="eligibility">Eligibilty: open</p>
+                        <p class="participants">No. of Participants: ∞</p>
+                        <p class="teams mb-16">No. of teams per school: 1</p>
+                        <p class="des">
+                            Solving Cryptic clues and racing with everyone to complete the most number of challenges. We present to you our annual cryptic hunt - X-Quest. Cryptic hunts are the online equivalent of treasure hunts and require you to hunt the internet for clues to solve given challenges. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-xclusive">
+            <div class="popup__content">
+                <div class="popup__right">
+                    <a href="#events" class="popup__close">&times;</a>
+                    <h2 class="heading-2 mb-4">Xclusive</h2>
+                    <h3 class="heading-3 mb-16">surprise</h3>
+                    <div class="popup__text mb-4">
+                        <p class="eligibility">Eligibilty: open</p>
+                        <p class="participants">No. of Participants: 2</p>
+                        <p class="teams mb-16">No. of teams per school: 1</p>
+                        <p class="des">
+                            We would tell you to expect the unexpected, but that would be too mainstream. The battle is on, soldier. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-xclam">
+            <div class="popup__content">
+                <div class="popup__right">
+                    <a href="#events" class="popup__close">&times;</a>
+                    <h2 class="heading-2 mb-4">Xclamation Point</h2>
+                    <h3 class="heading-3 mb-16">group discussion</h3>
+                    <div class="popup__text mb-4">
+                        <p class="eligibility">Eligibilty: IX-XII</p>
+                        <p class="participants">No. of Participants: 1</p>
+                        <p class="teams mb-16">No. of teams per school: 1</p>
+                        <p class="des">
+                            For good ideas and true innovation, you need human interaction, argument, and discussion. To give your views a voice, your logic a reason and your conviction a direction, we invite you to the colossal clash of ideas and opinions. The preliminary round would be based on whose prompts would be released on 21 Aug 2022. The submissions would close on 24 Aug 2022. Top 8 participants would then be advance to the final round 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-execute">
+            <div class="popup__content">
+                <div class="popup__right">
+                    <a href="#events" class="popup__close">&times;</a>
+                    <h2 class="heading-2 mb-4">Execute.eXe</h2>
+                    <h3 class="heading-3 mb-16">competitive programming</h3>
+                    <div class="popup__text mb-4">
+                        <p class="eligibility">Eligibilty: IX-XII</p>
+                        <p class="participants">No. of Participants: up to 2</p>
+                        <p class="teams mb-16">No. of teams per school: 1</p>
+                        <p class="des">
+                            The event that tests your programming skills and endurance at the highest level. It is for those who wish to program competitively and compete with similar minded people. The preliminary round that will be held on hackerrank will select 6-8 teams to go to the next round. 
+                            The finals would involve solving programming questions at the highest level. The solutions will be judged on efficiency and time taken. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-unity">
+            <div class="popup__content">
+                <div class="popup__right">
+                    <a href="#events" class="popup__close">&times;</a>
+                    <h2 class="heading-2 mb-4">Unity.eXe</h2>
+                    <h3 class="heading-3 mb-16">game development</h3>
+                    <div class="popup__text mb-4">
+                        <p class="eligibility">Eligibilty: IX-XII</p>
+                        <p class="participants">No. of Participants: up to 3</p>
+                        <p class="teams mb-16">No. of teams per school: 1</p>
+                        <p class="des">
+                            A brand new event that lets you put your programming and game design skills to use. Combine teamwork with your technical skills to create the best game possible in a short time. The preliminary round will be held over 3-4 days where the participants will have to create a game from the ground up using Any Game Engine based on the prompt given at the start of the event. The prompts would be released on 21 Aug 00:00 hours and the submission deadline would be till 24 Aug 23:59 hours 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-x86">
+            <div class="popup__content">
+                <div class="popup__right">
+                    <a href="#events" class="popup__close">&times;</a>
+                    <h2 class="heading-2 mb-4">X-86</h2>
+                    <h3 class="heading-3 mb-16">hardware</h3>
+                    <div class="popup__text mb-4">
+                        <p class="eligibility">Eligibilty: VIII-XII</p>
+                        <p class="participants">No. of Participants: up to 3</p>
+                        <p class="teams mb-16">No. of teams per school: 1</p>
+                        <p class="des">
+                            You will need to formulate a team with students well versed in software development, electronics, and operating systems. Participants will be given 3-4 tasks to be completed over 4 days, starting from 21 Aug 2022 - 24 Aug 2022 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-xposure">
+            <div class="popup__content">
+                <div class="popup__right">
+                    <a href="#events" class="popup__close">&times;</a>
+                    <h2 class="heading-2 mb-4">Xposure</h2>
+                    <h3 class="heading-3 mb-16">photography</h3>
+                    <div class="popup__text mb-4">
+                        <p class="eligibility">Eligibilty: VIII-XII</p>
+                        <p class="participants">No. of Participants: up to 3</p>
+                        <p class="teams mb-16">No. of teams per school: 1</p>
+                        <p class="des">
+                            Our photography event consists of two sub events. <br>
+                            <b>Musical Shutter:</b> Participants will be required to create an album cover within a given time limit. Only a single participant from each school will be allowed to participate in this event. <br>
+                            <b>Camcord:</b> The participants will be provided with a prompt (which could be a lyric, quote, painting, or even another photograph) on the basis of which they must weave a story through photos. Each school can send up to two participants for this event.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{%endblock%}

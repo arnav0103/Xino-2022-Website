@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<main class="lboard-hero">
+    <h1 class="heading-1">Leaderboard</h1>
+    <div class="lboard">
+      <div class="lboard-item lboard-item-main">
+        <p class="sno">0</p>
+        <p class="lboard-name">Decode</p>
+        <p class="lboard-points">∞</p>
+    </div>
+      {%for user in all_users%}
+        <div class="lboard-item">
+            <p class="sno">{{rank.pop()}}</p>
+            {%if user == current_user%}
+            <p class="lboard-name">{{user.username}}(You)</p>
+            {%else%}
+              {%if current_user.username == "Xino"%}
+              <a class="lboard-name" href="{{url_for('profile',username = user.id)}}"><p class="lboard-name">{{user.username}}
+              {%if user.ip%}
+              {{user.ip}}
+              {%endif%}
+              </p></a>
+              {%else%}
+            <p class="lboard-name">{{user.username}}</p>
+              {%endif%}
+            {%endif%}
+            <p class="lboard-points">{{user.question - 1}}</p>
+        </div>
+      {%endfor%}
+    </div>
+    {%if current_user.username == "Xino"%}
+    <table class = "table">
+    <tbody>
+      <tr class="table-row">
+        <th scope="col">banned</th>
+        <th scope="col">username</th>
+      </tr>
+      {%for i in restricted%}
+    <tr>
+      <br>
+      <td>Banned:</td>
+      <td><a href="{{url_for('profile',username = i.id)}}">{{i.username}}</a> <br></td>
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+{%endif%}
+</main>
+{%endblock%}

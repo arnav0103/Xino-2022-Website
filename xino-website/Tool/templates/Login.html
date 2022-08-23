@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main class="login-hero">
+        <h1 class="heading-1">Login</h1>
+        <form method="post" class="reg-form">
+          {{form.hidden_tag()}}
+            <div class="input-wrapper">
+                <label for="uname" class="form-label">{{form.username.label}}</label>
+                {{form.username(class="form-input exceptions")}}
+            </div>
+
+            {%if form.username.errors%} {%for error in form.username.errors%}
+                <small>{{error}}</small>
+            {%endfor%} {%endif%}
+
+            <div class="input-wrapper">
+                <label for="pass" class="form-label">{{form.password.label}}</label>
+                {{form.password(class="form-input exceptions")}}
+                <small>{{mess}}</small>
+            </div>
+            {{form.submit(class="btn")}}
+        </form>
+
+    </main>
+
+{% endblock %}

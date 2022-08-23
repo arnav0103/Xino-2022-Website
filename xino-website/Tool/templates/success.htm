@@ -1,0 +1,19 @@
+{%extends 'base.htm'%}
+
+{%block content%}
+<br><br><br><br>
+
+    <style>
+        .center {
+    padding: 10% 0;
+    text-align: center;
+    }
+    </style>
+    <div class="center">
+    <h2 class="heading-2">
+        Your Registration has been received.
+    </h2><br>
+    <h3 class="heading-3" style="letter-spacing: 2px;">You may edit your response to the form anytime.</h3><br><br>
+    <a href="{{url_for('register',school=school,hash=hash)}}"><button class="form__btn">Edit your response</button></a>
+    </div>
+{%endblock%}

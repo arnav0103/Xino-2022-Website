@@ -1,0 +1,87 @@
+{%extends 'base.htm'%}
+{%block content%}
+    <main class="hero h-screen flex mb-48">
+        <div class="hero__img-container w-1/2 h-full overflow-hidden relative">
+            <img src="/static/img/hero_img.png" alt="hero image" class="hero__image w-full h-full absolute">
+        </div>
+
+        <div class="hero__text-container w-1/2 h-full relative">
+            <div class="hero__text w-full text-center absolute">
+                <h1 class="hero-heading font-bold tracking-wide">XINO'22</h1>
+                <p class="hero__caption text-gray-400 text-4xl mb-20">Extreme Innovation</p>
+                <a href="{{url_for('events')}}" class="btn-black mr-24">Details</a>
+                <a href="{{url_for('req_invite')}}" class="btn-black">Request Invite</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- WHO ARE WE SECTION -->
+    <div class="about relative text-center mb-48">
+        <img src="/static/img/triangular_stuff.png" alt="filler" class="about-filler-1 w-48 absolute right-0">
+        <h2 class="heading-1 mb-12">Who are we?</h2>
+        <p class="about__text w-3/5 text-3xl mx-auto leading-loose mb-12">
+            XINO comprises of numerous technology enthusiasts with a fiery passion for computer science. Each member has a unique perspective and a range of skills and the urge to innovate. The club members value the different ideas and aspirations of each other and work together to realize and achieve them. Ever since its inception, the members of the club have won innumerable events but never let the glory get in the way of learning. The members appreciate their achievements but never stop their crusade for more and continue on a quest to learn and reach greater heights. 
+        </p>
+        <img src="/static/img/triangular_stuff.png" alt="filler" class="about-filler-2 w-48 absolute left-0">
+    </div>
+
+    <!-- MEMBERS SECTION -->
+    <div class="members-section relative mb-12 pt-32 pl-24 flex justify-between">
+        <div class="members-section__text-container">
+            <h2 class="heading-1">Meet our team<h2>
+                    <p class="members-section__caption text-3xl mb-16 text-gray-400">
+                        The people who make it happen.
+                    </p>
+                    <a href="{{url_for('members')}}" class="btn-black">Learn more</a>
+        </div>
+        <div class="members-section__img-container w-7/12">
+            <img src="/static/img/xino_members.png" alt="xino members" class="w-full">
+        </div>
+    </div>
+
+    <!-- STATISTICS SECTION -->
+    <!-- <div class="stats relative text-center mb-48">
+            <h2 class="heading-1 mb-24">everyone is here.<h2>
+            <img src="static/img/triangular stuff.png" alt="filler" class="members-filler-1 w-48 absolute left-0 top-1/2">
+
+            <div class="stats__info flex justify-between w-3/5 mx-auto">
+                <div class="stat flex flex-col items-center justify-center">
+                    <div class="stat__number text-8xl font-bold mb-4">600+</div>
+                    <div class="stat__caption text-4xl text-gray-500">Participants</div>
+                </div>
+                <div class="stat flex flex-col items-center justify-center">
+                    <div class="stat__number text-8xl font-bold mb-4">35+</div>
+                    <div class="stat__caption text-4xl text-gray-500">Schools</div>
+                </div>
+                <div class="stat flex flex-col items-center justify-center">
+                    <div class="stat__number text-8xl font-bold mb-4">9</div>
+                    <div class="stat__caption text-4xl text-gray-500">Events</div>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- ALUMNI SECTION -->
+    <div class="alumni relative text-center mb-36">
+        <h2 class="heading-1 mb-16">Our alumni.<h2>
+                <img src="/static/img/triangular_stuff.png" alt="filler" class="alumni-filler-1 w-48 absolute right-0 top-1/2">
+                <div class="alumni__list flex justify-evenly items-center w-4/5 mx-auto mb-20">
+                    <div class="alumnus">
+                        <p class="alumnus__name text-3xl mb-2">Shaurya Bajaj</p>
+                        <p class="alumnus__post text-2xl text-gray-500">President</p>
+                    </div>
+                    <div class="alumnus">
+                        <p class="alumnus__name text-3xl mb-2">Manit Kaushik</p>
+                        <p class="alumnus__post text-2xl text-gray-500">President</p>
+                    </div>
+                    <div class="alumnus">
+                        <p class="alumnus__name text-3xl mb-2">Moaksh Kakkar</p>
+                        <p class="alumnus__post text-2xl text-gray-500">Vice President</p>
+                    </div>
+                    <div class="alumnus">
+                        <p class="alumnus__name text-3xl mb-2">Shaunak Sachdev</p>
+                        <p class="alumnus__post text-2xl text-gray-500">Vice President</p>
+                    </div>
+                </div>
+    </div>
+
+{%endblock%}
