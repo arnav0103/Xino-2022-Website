@@ -2,7 +2,7 @@
     --color-primary: #07da93;
     --color-primary-light: #00eb9e;
     --color-primary-dark: #02bb7d;
-
+    --bgwhite: #fff
     --color-grey-light-1: #faf9f9;
     --color-grey-light-2: #c6c7c9;
 
@@ -55,7 +55,7 @@ html {
 }
 
 body {
-    background-color: var(--color-grey-dark-1);
+    background-color: var(--color);
     overflow-x: hidden;
 }
 
@@ -705,3 +705,113 @@ td a:hover {
         font-size: 1.4rem;
     }
 }
+
+
+/*uv*/
+ html, body {
+	 width: 100%;
+	 margin: 0 auto;
+   background-color: #fff;
+	 font-family: '', sans-serif;
+	 overflow: hidden;
+}
+ html #background, body #background {
+	 position: fixed;
+	 top: 50%;
+	 left: 50%;
+	 min-width: 100%;
+	 min-height: 100%;
+	 width: auto;
+	 height: auto;
+	 z-index: -100;
+	 -webkit-transform: translateX(-50%) translateY(-50%);
+	 transform: translateX(-50%) translateY(-50%);
+	 overflow: hidden;
+	 -webkit-filter: blur(5px);
+	 -moz-filter: blur(5px);
+	 -o-filter: blur(5px);
+	 -ms-filter: blur(5px);
+	 filter: blur(5px);
+}
+ html .main, body .main {
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 top: 50%;
+	 left: 50%;
+	 margin: 0 auto;
+	 transform: translate(-50%, -50%);
+}
+ html .main #content, body .main #content {
+	 width: 100%;
+	 max-width: 600px;
+	 margin: 0 auto;
+	 min-height: 24px;
+	 height: 100%;
+	 position: relative;
+	 text-align: center;
+	 top: 33%;
+}
+ html .main #content .title, body .main #content .title {
+	 color: white;
+	 font-family: 'Inconsolata', sans-serif;
+	 font-size: 4rem;
+	 text-transform: uppercase;
+	 padding-bottom: 0px;
+	 margin-bottom: 0px;
+}
+ html .main #content .title span, body .main #content .title span {
+	 -webkit-animation: MISSION-HOVER 5s infinite;
+	 -moz-animation: MISSION-HOVER 5s infinite;
+	 -o-animation: MISSION-HOVER 5s infinite;
+	 animation: MISSION-HOVER 5s infinite;
+	 animation-direction: alternate;
+	 animation-timing-function: ease;
+}
+ @-webkit-keyframes MISSION-HOVER {
+	 0%, 100% {
+		 font-size: 4rem;
+		 color: #181818;
+	}
+	 50% {
+		 color: #0cd687;
+		 letter-spacing: 0.1em;
+		 text-shadow: 0px 0px 30px #0cd689b1;
+	}
+}
+ html .main #content p, body .main #content p {
+	 color: #121212;
+	 font-family: 'Inconsolata', sans-serif;
+	 font-size: 2rem;
+	 margin: 0 auto;
+	 padding: 0;
+	 letter-spacing: 3rem;
+	 text-transform: uppercase;
+}
+ html .main #content p:last-child, body .main #content p:last-child {
+	 font-size: 2rem;
+	 font-weight: 700;
+	 padding: 0;
+	 letter-spacing: 0.1rem;
+}
+ html .main #content p:last-child >
+ a, body .main #content p:last-child >
+ a {
+	 text-decoration: none;
+	 color: inherit;
+	 -moz-transition: all 0.2s ease-in;
+	 -o-transition: all 0.2s ease-in;
+	 -webkit-transition: all 0.2s ease-in;
+	 transition: all 0.2s ease-in;
+}
+ html .main #content p:last-child >
+ a:hover, body .main #content p:last-child >
+ a:hover {
+	 color: #fff;
+ }
+
+.para {
+  color: #121212;
+  font-size: 2rem;
+}
+/*uv*/
