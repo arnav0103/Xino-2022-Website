@@ -30,6 +30,13 @@ def index():
     #         except:
     #             continue
     #     db.session.commit()
+
+
+    # user = Questions(answer='test',
+    #             question='test',
+    #             source='hahaha')
+    # db.session.add(user)
+    # db.session.commit()
     return(render_template('index.htm'))
 
 
@@ -205,34 +212,34 @@ def registera():
 @app.route('/play',methods=['GET','POST'] )
 @login_required
 def play():
-    # current_user.ip = flask.request.remote_addr
-    # db.session.commit()
-    # if current_user.restricted=="Yes":
-    #     abort(403)
-    # form = PlayForm()
-    # mess = ""
-    # max = Questions.query.order_by(Questions.id.desc())
-    # questions = current_user.question
-    # user = User.query.get(current_user.id)
-    # if user.question > max[0].id:
-    #     return "Congratulations and celeberations! Admins gonna contact"
-    # question = Questions.query.get(user.question)
-    # answers = form.answer.data
-    # if form.validate_on_submit():
-    #     if answers is not None:
-    #         log = Logs(answer = answers.lower(),answer_time = datetime.now(),question = user.question,userid = current_user.id)
-    #         db.session.add(log)
-    #         db.session.commit()
-    #         if answers.lower() == question.answer.lower():
-    #             user.question += 1
-    #             user.answer_time= datetime.now()
-    #             db.session.add(user)
-    #             db.session.commit()
-    #             mess = "correct"
-    #             return redirect(url_for('play'))
-    #         else:
-    #             mess = "wrong"
-    # return render_template('play.html',form=form,use=questions,question=question.question,mess=mess,source = question.source,imgur = question.imgur)
+    current_user.ip = flask.request.remote_addr
+    db.session.commit()
+    if current_user.restricted=="Yes":
+        abort(403)
+    form = PlayForm()
+    mess = ""
+    max = Questions.query.order_by(Questions.id.desc())
+    questions = current_user.question
+    user = User.query.get(current_user.id)
+    if user.question > max[0].id:
+        return "Congratulations and celeberations! Admins gonna contact"
+    question = Questions.query.get(user.question)
+    answers = form.answer.data
+    if form.validate_on_submit():
+        if answers is not None:
+            log = Logs(answer = answers.lower(),answer_time = datetime.now(),question = user.question,userid = current_user.id)
+            db.session.add(log)
+            db.session.commit()
+            if answers.lower() == question.answer.lower():
+                user.question += 1
+                user.answer_time= datetime.now()
+                db.session.add(user)
+                db.session.commit()
+                mess = "correct"
+                return redirect(url_for('play'))
+            else:
+                mess = "wrong"
+    return render_template('play.html',form=form,use=questions,question=question.question,mess=mess,source = question.source,imgur = question.imgur)
     return render_template('HomePage.html')
 
 @app.route('/leaderboard' )
