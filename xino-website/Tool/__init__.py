@@ -16,7 +16,6 @@ app.config['SECRET_KEY'] = '$h1tz3c0'
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+os.path.join(basedir,'data.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SERVER_NAME'] = "localhost:5000"
 
 db = SQLAlchemy(app)
 Migrate(app,db)

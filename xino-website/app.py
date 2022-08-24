@@ -6,14 +6,30 @@ from flask import render_template, request, url_for, redirect, abort
 from flask_login import login_user,login_required,logout_user,current_user
 from datetime import datetime
 from gspread_formatting import *
+import flask
+from Tool.models import User, Questions, Logs
 from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy import desc , asc
 username =''
 application = app
-
+# import csv
+#
+# filename='file_reg.csv'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    # with open(filename, 'r') as csvfile:
+    #     datareader = csv.reader(csvfile)
+    #     for row in datareader:
+    #         try:
+    #             user = User(username=row[1],
+    #                         password=row[2],
+    #                         school=row[0],
+    #                         question=1)
+    #             db.session.add(user)
+    #         except:
+    #             continue
+    #     db.session.commit()
     return(render_template('index.htm'))
 
 
@@ -132,17 +148,17 @@ def req_invite():
 
 
 ################################################
-@app.route('/', subdomain='xquest')
+@app.route('/xquest' )
 def home():
     return render_template('HomePage.html')
 
-@app.route('/logout', subdomain='xquest')
+@app.route('/logout' )
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('home'))
 
-@app.route('/login', methods=['GET', 'POST'], subdomain='xquest')
+@app.route('/login', methods=['GET', 'POST'] )
 def login():
     mess = 'Please fill form to login'
     form = LoginForm()
@@ -167,7 +183,7 @@ def login():
     print(mess)
     return render_template('Login.html', form=form,mess=mess)
 
-@app.route('/register',methods=['GET','POST'], subdomain='xquest')
+@app.route('/register',methods=['GET','POST'] )
 def registera():
     mess = 'Register to play the most exciting cryptic hunts ever'
     try:
@@ -186,7 +202,7 @@ def registera():
     return render_template('Register.html',form = form,mess=mess)
 
 
-@app.route('/play',methods=['GET','POST'], subdomain='xquest')
+@app.route('/play',methods=['GET','POST'] )
 @login_required
 def play():
     current_user.ip = flask.request.remote_addr
@@ -218,7 +234,7 @@ def play():
                 mess = "wrong"
     return render_template('play.html',form=form,use=questions,question=question.question,mess=mess,source = question.source,imgur = question.imgur)
 
-@app.route('/leaderboard', subdomain='xquest')
+@app.route('/leaderboard' )
 @login_required
 def leaderboard():
     all_users = User.query.order_by(User.question.desc(),User.answer_time.asc()).all()
@@ -239,7 +255,7 @@ def leaderboard():
     restricted = User.query.filter_by(restricted="Yes")
     return render_template('leaderboard.html',all_users=all,rank=rank,restricted=restricted)
 
-@app.route('/admin_panel',methods=['GET','POST'], subdomain='xquest')
+@app.route('/admin_panel',methods=['GET','POST'] )
 @login_required
 def admin():
     if current_user.username != 'Xino':
@@ -248,7 +264,7 @@ def admin():
         all_logs = Logs.query.order_by(Logs.id.desc())
         return render_template("admin_panel.htm",all_logs=all_logs)
 
-@app.route('/profile/<username>',methods = ['GET','POST'], subdomain='xquest')
+@app.route('/profile/<username>',methods = ['GET','POST'] )
 @login_required
 def profile(username):
     if current_user.username != 'Xino':
@@ -262,7 +278,7 @@ def profile(username):
     logs.reverse()
     return render_template("profile.htm",user=user[0],logs=logs)
 
-@app.route('/restrict/<username>',methods = ['GET','POST'], subdomain='xquest')
+@app.route('/restrict/<username>',methods = ['GET','POST'] )
 @login_required
 def ban(username):
     if current_user.username != 'Xino':
@@ -274,7 +290,7 @@ def ban(username):
         return redirect(url_for('admin'))
     return abort(404)
 
-@app.route('/unrestrict/<username>',methods = ['GET','POST'], subdomain='xquest')
+@app.route('/unrestrict/<username>',methods = ['GET','POST'] )
 @login_required
 def unban(username):
     if current_user.username != 'Xino':
