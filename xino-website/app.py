@@ -30,6 +30,13 @@ def index():
     #         except:
     #             continue
     #     db.session.commit()
+
+
+    # user = Questions(answer='test',
+    #             question='test',
+    #             source='hahaha')
+    # db.session.add(user)
+    # db.session.commit()
     return(render_template('index.htm'))
 
 
