@@ -13,8 +13,8 @@ from sqlalchemy import desc , asc
 username =''
 application = app
 # import csv
-
-# filename='file_reg.csv'
+#
+# filename='cs_answers.csv'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -22,10 +22,10 @@ def index():
     #     datareader = csv.reader(csvfile)
     #     for row in datareader:
     #         try:
-    #             user = User(username=row[1],
-    #                         password=row[2],
-    #                         school=row[0],
-    #                         question=1)
+    #             user = Questions(question=row[0],
+    #                         answer=row[1],
+    #                         source=row[2])
+    #             user.imgur=row[3]
     #             db.session.add(user)
     #         except:
     #             continue
